@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>图片轮播系列1</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+	<link rel="stylesheet" type="text/css" href="style/lunbo.css">
+</head>
+<body id="home">
+	<!-- header start -->
+	<header id="mainHeader">
+		<div class="container">
+			<!-- logo -->
+			<h1 id="logo">AbbyShaw's Blog</h1>
+			<!-- navigator -->
+			<nav id="mainNav">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li class="active"><a href="#">WORK</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- header end -->
+	<!-- main start -->
+	<main id="main">
+		<div class="container">
+			<article id="main-content">
+				<section id="fade">
+					<h2>1. 淡入淡出</h2>
+					<div id="fade1" class="of">
+						<div class="stage">
+							<ul class="imgList">
+								<li class="active"><img src="img/1.jpg"></li>
+								<li><img src="img/2.jpg"></li>
+								<li><img src="img/3.jpg"></li>
+								<li><img src="img/4.jpg"></li>
+								<li><img src="img/5.jpg"></li>
+							</ul>
+							<ul class="btn">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="text">
+							<h3>原理：</h3>
+							<p>通过定时改变当前图片的透明度和下一张图片的透明度。</p>
+						</div>
+					</div>
+				</section>
+				<section id="carousel">
+					<h2>2. 无缝滚动</h2>
+					<div id="carousel1" class="of">
+						<div class="stage">
+							<div class="imgBox">
+								<ul class="imgList">
+									<li><img src="img/1.jpg"></li>
+									<li><img src="img/2.jpg"></li>
+									<li><img src="img/3.jpg"></li>
+									<li><img src="img/4.jpg"></li>
+									<li><img src="img/5.jpg"></li>
+								</ul>
+							</div>
+							<ul class="btn">
+								<li class="active"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+						<div class="text">
+							<h3>原理：</h3>
+							<p>首先在图片列表最后再加入第一张图片，然后定时滚动图片列表距离，当滚动到最后一张（即新增的第一张图片）时，将整个图片列表滚动回初始位置，从而实现无缝滚动的效果。</p>
+						</div>
+					</div>
+					<div id="carousel2" class="of">
+						<div class="stage">
+							<div class="imgBox">
+								<ul class="imgList">
+									<li><img src="img/1.jpg"></li>
+									<li><img src="img/2.jpg"></li>
+									<li><img src="img/3.jpg"></li>
+									<li><img src="img/4.jpg"></li>
+									<li><img src="img/5.jpg"></li>
+								</ul>
+							</div>
+							<div class="btn">
+								<a href="#" class="prev">&lt;</a>
+								<a href="#" class="next">&gt;</a>
+							</div>
+						</div>
+						<div class="text">
+							<h3>原理：</h3>
+							<p>首先对图片列表进行自我复制，当图片列表移动到列表长度二分之一处，即到达最后一张，则将图片列表移至初始位置，当图片列表移动到初始位置时，即到达第一张，则将图片列表移至列表长度的二分之一处，从而实现无缝切换效果。</p>
+						</div>
+					</div>
+					<div id="carousel3" class="of">
+						<div class="stage">
+							<div class="imgBox">
+								<ul class="imgList">
+									<li class="active"><img src="img/1.jpg"></li>
+									<li><img src="img/2.jpg"></li>
+									<li><img src="img/3.jpg"></li>
+									<li><img src="img/4.jpg"></li>
+									<li><img src="img/5.jpg"></li>
+								</ul>
+							</div>
+							<div class="btn">
+								<a href="#" class="prev">&lt;</a>
+								<a href="#" class="next">&gt;</a>
+							</div>
+						</div>
+						<div class="text">
+							<h3>原理：</h3>
+							<p>通过将所有图片绝对定位到可视区的右边，然后改变当前图片和下一张图片的left值，使图片滚动过可视区，当当前图片滚动出可视区时，再将当前图片定位回初始位置，不断循环即可实现无缝切换效果。</p>
+						</div>
+					</div>
+				</section>
+			</article>
+			<aside></aside>
+		</div>
+	</main>
+	<!-- main end -->
+	<!-- footer start -->
+	<footer id="mainFooter">
+		<div class="container">
+			<p>&copy;By AbbyShaw</p>
+		</div>
+	</footer>
+	<!-- footer end -->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/lunbo.js"></script>
+</body>
+</html>
