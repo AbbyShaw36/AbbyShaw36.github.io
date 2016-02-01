@@ -1,2 +1,10 @@
-#main-content li a { text-decoration: none; color: #000; }
-#main-content li a:hover { text-decoration: underline; }
+#work { margin: 1em 0; }
+#work ul { margin: 0; padding: 0; }
+#work .title li { float: left; width: 100px; padding: 10px 0; text-align: center; background: #ccc; list-style: none; font: 1.2em '微软雅黑'; color: #333; cursor: pointer; }
+#work .title .active { background: #f96668; color: #fff; }
+#work .content { clear: both; background: #f0f0f0; }
+#work .content ul { display: none; padding: 1em; list-style-position: inside; }
+#work .content li { padding: 4px; }
+#work .content a { text-decoration: none; color: #000; }
+#work .content a:hover { text-decoration: underline; }
+#work .content .active { display: block; }
