@@ -1,0 +1,12 @@
+.stage { width: 820px; margin: 1em auto; overflow: hidden; }
+
+#message { float: right; width: 400px; }
+#message p { text-indent: 2em; line-height: 2em; }
+
+#magnify { position: relative; float: left; }
+#magnify .smallImg { width: 400px; height: 400px; border: 1px solid #ccc; }
+#magnify .smallImg img { width: 100%; height: 100%; }
+#magnify .hover { position: absolute; z-index: 2; width: 100%; height: 100%; }
+#magnify .piece { display: none; position: absolute; z-index: 1; width: 200px; height: 200px; background: #000; opacity: 0.3; }
+#magnify .bigImg { display: none; position: absolute; top: 0; left: 420px; width: 400px; height: 400px; overflow: hidden; }
+#magnify .bigImg img { position: relative; width: 800px; height: 800px; }

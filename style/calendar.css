@@ -1,0 +1,12 @@
+#calendar table { width: 250px; text-align: center; border: 2px solid #f96668; border-collapse: collapse; }
+
+#calendar caption { padding: 10px; background: #f96668; color: #fff; }
+#calendar .prev { float: left; cursor: pointer; }
+#calendar .next { float: right; cursor: pointer; }
+
+#calendar th ,#calendar td { padding: 6px 0; }
+#calendar .red { color: #f00; }
+
+#calendar tfoot td { padding: 10px; border-top: 2px solid #f96668; }
+#calendar .today { float: left; cursor: pointer; }
+#calendar .time { float: right; }

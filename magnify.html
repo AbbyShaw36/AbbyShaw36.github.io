@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>放大镜效果</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+	<link rel="stylesheet" type="text/css" href="style/magnify.css">
+</head>
+<body>
+<body id="home">
+	<!-- header start -->
+	<header id="mainHeader">
+		<div class="container">
+			<!-- logo -->
+			<h1 id="logo">AbbyShaw's Blog</h1>
+			<!-- navigator -->
+			<nav id="mainNav">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li class="active"><a href="#">WORK</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- header end -->
+	<!-- main start -->
+	<main id="main">
+		<div class="container">
+			<article id="main-content">
+				<section class="stage">
+					<div id="message">
+						<h2>放大镜效果</h2>
+						<p>此效果用面向对象实现，主要是将整体效果分为三个部分。第一部分是鼠标移入图片时显示小方块和大图，第二部分是鼠标移出图片时隐藏小方块和大图，第三部分则是鼠标在图片中移动时，通过调整小方块的位置和大图的位置来实现放大效果。</p>
+					</div>
+					<div id="magnify">
+						<div class="smallImg">
+							<span class="hover"></span>
+							<span class="piece"></span>
+							<img src="img/small.jpg">
+						</div>
+						<div class="bigImg">
+							<img src="img/big.jpg">
+						</div>
+					</div>
+				</section>
+			</article>
+		</div>
+	</main>
+	<!-- main end -->
+	<!-- footer start -->
+	<footer id="mainFooter">
+		<div class="container">
+			<p>&copy;By AbbyShaw</p>
+		</div>
+	</footer>
+	<!-- footer end -->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/magnify.js"></script>
+</body>
+</body>
+</html>
