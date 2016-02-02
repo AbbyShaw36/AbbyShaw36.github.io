@@ -11,8 +11,11 @@ window.onload = function() {
 					aTitleLi[i].className = "";
 					aContentUl[i].className = "";
 				};
+				
 				aTitleLi[index].className = "active";
 				aContentUl[index].className = "active";
+
+				return false;
 			}
 		})(i);
 	};

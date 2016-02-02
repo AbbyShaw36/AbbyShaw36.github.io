@@ -1,4 +1,7 @@
-#calendar table { width: 250px; text-align: center; border: 2px solid #f96668; border-collapse: collapse; }
+#calendar { margin: 1em; }
+#calendar .passage p { padding: 10px; text-indent: 2em; line-height: 30px; }
+
+#calendar table { width: 250px; margin: 0 auto; text-align: center; border: 2px solid #f96668; border-collapse: collapse; }
 
 #calendar caption { padding: 10px; background: #f96668; color: #fff; }
 #calendar .prev { float: left; cursor: pointer; }
@@ -7,6 +10,8 @@
 #calendar th ,#calendar td { padding: 6px 0; }
 #calendar .red { color: #f00; }
 
+#calendar tbody .today { background: #f96668; border-radius: 40px; }
+
 #calendar tfoot td { padding: 10px; border-top: 2px solid #f96668; }
-#calendar .today { float: left; cursor: pointer; }
-#calendar .time { float: right; }
+#calendar tfoot .today { float: left; cursor: pointer; }
+#calendar tfoot .time { float: right; }
