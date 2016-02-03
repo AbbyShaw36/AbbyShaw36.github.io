@@ -59,6 +59,7 @@ var DragPuzzle = {
 				oLi.style.height = oneHeight + "px";
 				oLi.style.backgroundImage = "url(" + that.url + ")";
 				oLi.style.backgroundPosition = -left + "px " + -top + "px";
+				oLi.isMove = false;
 
 				oLi.onmousedown = function() {
 					var oldLeft = this.style.left;
@@ -67,6 +68,7 @@ var DragPuzzle = {
 					for (var i = 0; i < that.imgArray.length; i++) {
 						that.imgArray[i].style.zIndex = 0;
 					};
+
 					var This = this;
 					document.onmousemove = function(ev) {
 						var oEvent = window.event ? event : ev;
@@ -89,26 +91,37 @@ var DragPuzzle = {
 						This.style.left = left + "px";
 						This.style.top = top + "px";
 						This.style.zIndex = 1;
+						This.isMove = true;
 
-						document.onmouseup = function(ev) {
-							var oEvent = window.event ? event : ev;
-							var meetObj = that.meetObj(This);
-
-							This.style.left = meetObj.style.left;
-							This.style.top = meetObj.style.top;
-							meetObj.style.left = oldLeft;
-							meetObj.style.top = oldTop;
-
-							// 判断是否过关
-							if (that.isWin()) {
-								alert("You win!");
-								that.arrange();
-							}
+						return false;
+					}
+					document.onmouseup = function(ev) {
+						if (!This.isMove) {
+							This.style.left = oldLeft;
+							This.style.top = oldTop;
 
 							document.onmousemove = null;
 							document.onmouseup = null;
+							
 							return false;
+						};
+
+						var meetObj = that.meetObj(This);
+
+						This.style.left = meetObj.style.left;
+						This.style.top = meetObj.style.top;
+						meetObj.style.left = oldLeft;
+						meetObj.style.top = oldTop;
+
+						// 判断是否过关
+						if (that.isWin()) {
+							alert("You win!");
+							that.arrange();
 						}
+
+						document.onmousemove = null;
+						document.onmouseup = null;
+						This.isMove = false;
 						return false;
 					}
 					return false;
