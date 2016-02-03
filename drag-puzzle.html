@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>拖拽拼图小游戏</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+	<style type="text/css">
+		#dragPuzzle .stage ul { position: relative; padding: 0; margin: 0; list-style: none; border: 1px solid #ccc; }
+		#dragPuzzle .stage li { position: absolute; }
+	</style>
+</head>
+<body id="home">
+	<!-- header start -->
+	<header id="mainHeader">
+		<div class="container">
+			<!-- logo -->
+			<h1 id="logo">AbbyShaw's Blog</h1>
+			<!-- navigator -->
+			<nav id="mainNav">
+				<ul>
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="#">WORK</a></li>
+					<li><a href="#">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- header end -->
+	<!-- main start -->
+	<main id="main">
+		<div class="container">
+			<article id="main-content">
+				<div id="dragPuzzle">
+					<div class="stage">
+						<!-- <img src="img/small.jpg"> -->
+					</div>
+					<div class="passage">
+						<h2>拖拽拼图游戏</h2>
+						<p>用背景定位将大图片切成各个小图片，然后通过绝对定位先记录正确的位置，再将图片随机放置，每次拖拽判断拖拽的小图与其他哪个小图中心点最近，则与其交换。</p>
+					</div>
+				</div>
+			</article>
+		</div>
+	</main>
+	<!-- main end -->
+	<!-- footer start -->
+	<footer id="mainFooter">
+		<div class="container">
+			<p>Power By &copy;<a href="https://github.com/abbyshaw36">AbbyShaw</a></p>
+		</div>
+	</footer>
+	<!-- footer end -->
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/drag-puzzle.js"></script>
+</body>
+</html>
