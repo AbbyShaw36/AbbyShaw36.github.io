@@ -5,7 +5,7 @@ window.onload = function() {
 	var aContentUl = oContent.getElementsByTagName('ul');
 
 	for (var i = 0; i < aTitleLi.length; i++) {
-		aTitleLi[i].onclick = (function(index){
+		aTitleLi[i].onmouseover = (function(index){
 			return function(){
 				for (var i = 0; i < aTitleLi.length; i++) {
 					aTitleLi[i].className = "";
