@@ -163,7 +163,7 @@ Calendar.prototype = {
 		};
 
 		// 删除空白行
-		if (aTd[35].innerHTML == "" && aTd[41].innerHTML == "") {
+		if (aTd[35].innerHTML == "") {
 			aTd[35].parentNode.style.display = "none";
 		};
 
