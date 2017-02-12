@@ -1,0 +1,448 @@
+/* 公用样式 */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+
+/* 复选框 */
+
+.checkbox {
+  display: inline-block;
+}
+
+.checkbox label {
+  position: relative;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 1000px;
+  overflow: hidden;
+  background-position: 0 0;
+  background: transparent url(TB1PsW9LFXXXXaXXVXXXXXXXXXX-800-600.png) no-repeat;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.checkbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.checked label {
+  background-position: 0 -20px;
+}
+
+
+/* 全选 */
+
+.select-all {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+.select-all label {
+  margin-right: 4px;
+}
+
+
+/* 对话框弹窗 */
+
+.dialog_shadow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .5;
+}
+
+.dialog_content {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  background: #fff;
+  border: 3px solid #ccc;
+}
+
+.dialog_head {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3f3f3f;
+}
+
+.dialog_close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  background: transparent url(TB1PsW9LFXXXXaXXVXXXXXXXXXX-800-600.png) no-repeat -60px -20px;
+  overflow: hidden;
+  line-height: 100px;
+  font-size: 0;
+}
+
+.dialog_btn-wrapper {
+  margin-top: 20px;
+}
+
+.dialog_content .btn {
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  margin-right: 10px;
+  border: 1px solid #52a0e5;
+  border-radius: 1px;
+  background: #52a0e5;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
+}
+
+.dialog_content .btn_cancel {
+  background: #fff;
+  border-color: #d9d9d9;
+  color: #3c3c3c;
+}
+
+
+/* 购物车 */
+
+.cart {
+  width: 990px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: #3c3c3c;
+}
+
+.cart a {
+  text-decoration: none;
+  color: #3c3c3c;
+}
+
+
+/* 购物车头部 */
+
+.cart_head {
+  height: 50px;
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+
+.cart_head .th {
+  float: left;
+  line-height: 20px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.cart_head .select-all {
+  width: 80px;
+}
+
+.cart_head .info {
+  width: 440px;
+}
+
+.cart_head .price,
+.cart_head .amount,
+.cart_head .sum {
+  width: 120px;
+}
+
+.cart_head .op {
+  width: 100px;
+}
+
+
+/* 购物车-店铺模块 */
+
+.cart .shop {
+  margin-bottom: 15px;
+}
+
+.cart .shop_info {
+  padding-left: 15px;
+  line-height: 38px;
+}
+
+.cart .shop_name {
+  font-weight: bolder;
+}
+
+.cart .shop_name a {
+  font-weight: normal;
+}
+
+
+/* 购物车-店铺-订单模块 */
+
+.cart .order {
+  border: 1px solid #ccc;
+  padding: 0 20px;
+  line-height: 18px;
+}
+
+.cart .order:after {
+  display: block;
+  height: 0;
+  content: "";
+  clear: both;
+}
+
+.cart .order+.order {
+  margin-top: -1px;
+}
+
+.cart .order .td {
+  float: left;
+  height: 82px;
+  padding: 18px 0;
+}
+
+.cart .order .select {
+  width: 20px;
+}
+
+.cart .order .info {
+  width: 500px;
+}
+
+.cart .order .info_td {
+  float: left;
+}
+
+.cart .order .info_img {
+  position: relative;
+}
+
+.cart .order .info_img .img_small {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.cart .order .info_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.cart .order .info_img .img_big {
+  position: absolute;
+  top: 0;
+  right: -260px;
+  z-index: 2;
+  display: none;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.cart .order .info_img .img_big:after {
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  transform: rotate(-45deg);
+}
+
+.cart .order .info_img .img_small:hover+.img_big {
+  display: block;
+}
+
+.cart .order .info_name {
+  width: 200px;
+  padding-right: 20px;
+}
+
+.cart .order .info_name a:hover {
+  color: #f40;
+  text-decoration: underline;
+}
+
+.cart .order .info_class {
+  position: relative;
+  width: 180px;
+  height: 118px;
+  padding: 20px;
+  margin: -19px 0;
+  box-sizing: border-box;
+  border: 1px dashed transparent;
+  color: #9c9c9c;
+}
+
+.cart .order .info_class:hover {
+  border-color: #f60;
+}
+
+.cart .order .change-class {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0 4px;
+  background: #f60;
+  color: #fff;
+}
+
+.cart .order .info_class:hover .change-class {
+  display: block;
+}
+
+.cart .order .price,
+.cart .order .amount,
+.cart .order .sum {
+  width: 120px;
+}
+
+.cart .order .price {
+  font-family: Verdana, Tahoma, arial;
+}
+
+.cart .order .price_old {
+  text-decoration: line-through;
+  color: #9c9c9c;
+}
+
+.cart .order .price_new {
+  font-weight: bolder;
+}
+
+.cart .order .amount-wrapper {
+  height: 25px;
+}
+
+.cart .order .amount_input {
+  float: left;
+  width: 40px;
+  height: 100%;
+  outline: none;
+  text-align: center;
+  color: #343434;
+  box-sizing: border-box;
+}
+
+.cart .order .amount_minus,
+.cart .order .amount_plus {
+  float: left;
+  display: inline-block;
+  width: 17px;
+  height: 100%;
+  line-height: 25px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  background: #f0f0f0;
+  text-align: center;
+  color: #444;
+}
+
+.cart .order .sum {
+  color: #f40;
+  font-weight: 700;
+  font-family: Verdana, Tahoma, arial;
+}
+
+.cart .order .del:hover {
+  text-decoration: underline;
+  color: #f40;
+}
+
+
+/* 购物车尾部 */
+
+.cart_foot {
+  height: 50px;
+  padding: 19px 0 19px 10px;
+  background: #e5e5e5;
+  box-sizing: border-box;
+}
+
+.cart_foot .op a {
+  margin-left: 20px;
+}
+
+.cart_foot .op a:hover {
+  text-decoration: underline;
+  color: #f40;
+}
+
+.cart_foot .amount-sum,
+.cart_foot .price-sum,
+.cart_foot .submit-btn {
+  float: left;
+  margin-top: -19px;
+  line-height: 50px;
+}
+
+.cart_foot .num {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 700;
+  font-family: tohoma, arial;
+  color: #f40;
+  vertical-align: baseline;
+}
+
+.cart_foot .amount-sum .num {
+  padding: 0 5px;
+  font-size: 18px;
+}
+
+.cart_foot .price-sum {
+  margin-left: 30px;
+}
+
+.cart_foot .price-sum .num {
+  padding: 0 3px;
+  font-size: 22px;
+}
+
+.cart_foot .submit-btn {
+  width: 120px;
+  background: #b0b0b0;
+  text-align: center;
+  font-family: 'Lantinghei SC', 'Microsoft Yahei';
+  font-size: 20px;
+}
+
+.cart_foot .submit-btn a {
+  display: block;
+  color: #fff;
+}
+
+.order_delete_dialog .dialog_content {
+  width: 374px;
+  margin-left: -187px;
+  margin-top: -73px;
+}

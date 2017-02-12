@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>购物车</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="cart js-cart">
+    <div class="cart_head">
+      <div class="th">
+        <a class="checkbox select-all js-checkbox js-select_all" href="javascript:void(0);">
+          <label><input type="checkbox">勾选购物车内所有商品</label>全选
+        </a>
+      </div>
+      <div class="th info">商品信息</div>
+      <div class="th price">单价</div>
+      <div class="th amount">数量</div>
+      <div class="th sum">金额</div>
+      <div class="th op">操作</div>
+    </div>
+    <div class="cart_body">
+      <div class="order-list">
+        <div class="shop js-shop">
+          <div class="shop_info">
+            <a class="checkbox js-checkbox js-select_shop" href="javascript:void(0);">
+              <label><input type="checkbox">勾选此店铺下所以商品</label>
+            </a>
+            <span class="shop_name">店铺：<a href="#">拉拉服饰旗舰</a></span>
+          </div>
+          <div class="order js-order" id="order1">
+            <div class="td select">
+              <a class="checkbox js-checkbox js-select_order" href="javascript:void(0);">
+                <label><input type="checkbox">勾选商品</label>
+              </a>
+            </div>
+            <div class="td info">
+              <div class="info_img info_td">
+                <div class="img_small">
+                  <a href="#"><img src="dress.jpg" alt=""></a>
+                </div>
+                <div class="img_big">
+                  <img src="dress2.jpg" alt="">
+                </div>
+              </div>
+              <div class="info_name info_td">
+                <a href="#"> 拉拉2016冬季新款女装显瘦翠花蕾丝连衣裙百褶裙</a>
+              </div>
+              <div class="info_class info_td">
+                <div>颜色分类：绿色</div>
+                <div>尺码：M</div>
+                <a class="change-class" href="javascript:void(0);">修改</a>
+              </div>
+            </div>
+            <div class="td price">
+              <div class="price_old">￥498.00</div>
+              <div class="price_new js-order_price">￥368.00</div>
+            </div>
+            <div class="td amount">
+              <div class="amount-wrapper js-amount">
+                <a class="amount_minus js-amount_minus" href="javascript:void(0);">-</a>
+                <input class="amount_input js-order_amount js-amount_input" type="text" data-max="11" value="1">
+                <a class="amount_plus js-amount_plus" href="javascript:void(0);">+</a>
+              </div>
+            </div>
+            <div class="td sum">
+              <div class="js-order_sum">￥368.00</div>
+            </div>
+            <div class="td op">
+              <a class="del js-order_delete" href="javascript:void(0);">删除</a>
+            </div>
+          </div>
+          <div class="order js-order" id="order2">
+            <div class="td select">
+              <a class="checkbox js-checkbox js-select_order" href="javascript:void(0);">
+                <label><input type="checkbox">勾选商品</label>
+              </a>
+            </div>
+            <div class="td info">
+              <div class="info_img info_td">
+                <div class="img_small">
+                  <a href="#"><img src="dress.jpg" alt=""></a>
+                </div>
+                <div class="img_big">
+                  <img src="dress2.jpg" alt="">
+                </div>
+              </div>
+              <div class="info_name info_td">
+                <a href="#"> 拉拉2016冬季新款女装显瘦翠花蕾丝连衣裙百褶裙</a>
+              </div>
+              <div class="info_class info_td">
+                <div>颜色分类：绿色</div>
+                <div>尺码：M</div>
+                <a class="change-class" href="javascript:void(0);">修改</a>
+              </div>
+            </div>
+            <div class="td price">
+              <div class="price_old">￥498.00</div>
+              <div class="price_new js-order_price">￥368.00</div>
+            </div>
+            <div class="td amount">
+              <div class="amount-wrapper js-amount">
+                <a class="amount_minus js-amount_minus" href="javascript:void(0);">-</a>
+                <input class="amount_input js-order_amount js-amount_input" type="text" data-max="11" value="1">
+                <a class="amount_plus js-amount_plus" href="javascript:void(0);">+</a>
+              </div>
+            </div>
+            <div class="td sum">
+              <div class="js-order_sum">￥368.00</div>
+            </div>
+            <div class="td op">
+              <a class="del js-order_delete" href="javascript:void(0);">删除</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cart_foot js-cart_foot">
+      <div class="l">
+        <a class="checkbox select-all js-checkbox js-select_all" href="javascript:void(0);">
+          <label><input type="checkbox">勾选购物车内所有商品</label>全选
+        </a>
+      </div>
+      <div class="l op">
+        <a class="del js-delete-selected" href="javascript:void(0);">批量删除</a>
+      </div>
+      <div class="r">
+        <div class="amount-sum">已选商品<em class="num js-cart_amount">0</em>件</div>
+        <div class="price-sum">合计（不含运费）：<em class="num js-cart_price">0.00</em></div>
+        <div class="submit-btn">
+          <a href="javascript:void(0);">结算</a>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-wrapper order_delete_dialog js-order_delete_dialog
+      js-dialog">
+      <div class="dialog_shadow js-dialog_shadow"></div>
+      <div class="dialog_content js-dialog_content">
+        <div class="dialog_head">
+          <div class="dialog_title">删除宝贝</div>
+          <a class="dialog_close js-dialog_close" href="javascript:void(0);">
+            <span>close</span>
+          </a>
+        </div>
+        <div class="dialog_body">
+          <div class="js-dialog_text">确定删除该宝贝吗？</div>
+          <div class="dialog_btn-wrapper">
+            <a class="btn js-dialog_confirm" href="javascript:void(0);">确定</a>
+            <a class="btn btn_cancel js-dialog_close" href="javascript:void(0);">关闭</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dialog-wrapper order_delete_dialog js-orders_delete_dialog
+      js-dialog">
+      <div class="dialog_shadow js-dialog_shadow"></div>
+      <div class="dialog_content js-dialog_content">
+        <div class="dialog_head">
+          <div class="dialog_title">删除宝贝</div>
+          <a class="dialog_close js-dialog_close" href="javascript:void(0);">
+            <span>close</span>
+          </a>
+        </div>
+        <div class="dialog_body">
+          <div class="js-dialog_text">确定要删除这些宝贝吗？</div>
+          <div class="dialog_btn-wrapper">
+            <a class="btn js-dialog_confirm" href="javascript:void(0);">确定</a>
+            <a class="btn btn_cancel js-dialog_close" href="javascript:void(0);">关闭</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="utils.js"></script>
+  <script src="cart.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

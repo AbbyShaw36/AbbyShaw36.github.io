@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <title>拖拽拼图小游戏</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    #dragPuzzle .stage ul {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      border: 1px solid #ccc;
+    }
+    
+    #dragPuzzle .stage li {
+      position: absolute;
+    }
+    
+    #dragPuzzle .stage li:hover {
+      cursor: crosshair;
+    }
+    
+    #dragPuzzle .passage p {
+      text-indent: 2em;
+      padding: 10px;
+      line-height: 30px;
+    }
+  </style>
+</head>
+
+<body id="home">
+  <div id="dragPuzzle">
+    <div class="passage">
+      <h2>拖拽拼图游戏</h2>
+      <div class="stage">
+        <!-- <img src="img/small.jpg"> -->
+      </div>
+      <p>用背景定位将大图片切成各个小图片，然后通过绝对定位先记录正确的位置，再将图片随机放置，每次拖拽判断拖拽的小图与其他哪个小图中心点最近，则与其交换，交换后判断是否与记录的正确位置一致。</p>
+    </div>
+  </div>
+  <script type="text/javascript" src="drag-puzzle.js"></script>
+</body>
+
+</html>

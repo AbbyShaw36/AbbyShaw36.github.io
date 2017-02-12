@@ -1,0 +1,180 @@
+CS_LAST_WORKSPACE: game
+CS_WORKSPACE_BEGIN: game
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+exe "cd " . escape(expand("<sfile>:p:h"), ' ')
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +66 index.html
+badd +105 style/main.css
+badd +25 js/app.js
+badd +13 js/model/card.js
+badd +37 js/model/playingCard.js
+badd +26 js/model/desk.js
+badd +14 js/model/playingDesk.js
+badd +23 js/view.js
+badd +2 js/model/pairCards.js
+badd +40 js/model/playingPairCards.js
+argglobal
+silent! argdel *
+set stal=2
+edit index.html
+edit index.html
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 13 - ((12 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+13
+normal! 026|
+tabedit style/main.css
+edit style/main.css
+edit style/main.css
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+tabedit js/app.js
+edit js/app.js
+edit js/app.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 152 - ((7 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+152
+normal! 040|
+tabedit js/view.js
+edit js/view.js
+edit js/view.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 52 - ((51 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+52
+normal! 0
+tabedit js/model/card.js
+edit js/model/card.js
+edit js/model/card.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 2 - ((1 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 02|
+tabedit js/model/playingCard.js
+edit js/model/playingCard.js
+edit js/model/playingCard.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 48 - ((47 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+48
+normal! 029|
+tabedit js/model/pairCards.js
+edit js/model/pairCards.js
+edit js/model/pairCards.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 22 - ((21 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+22
+normal! 014|
+tabedit js/model/playingPairCards.js
+edit js/model/playingPairCards.js
+edit js/model/playingPairCards.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 50 - ((46 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+50
+normal! 033|
+tabedit js/model/desk.js
+edit js/model/desk.js
+edit js/model/desk.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 17 - ((16 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+17
+normal! 016|
+tabedit js/model/playingDesk.js
+edit js/model/playingDesk.js
+edit js/model/playingDesk.js
+set splitbelow splitright
+set nosplitbelow
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+let s:l = 13 - ((12 * winheight(0) + 29) / 59)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+13
+normal! 038|
+tabnext 10
+set stal=1
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOc
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
+CS_WORKSPACE_END: game
