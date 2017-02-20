@@ -2,6 +2,7 @@
 
 ## 功能特效
 
+* [日历记事本](https://abbyshaw36.github.io/efficacy/react-calendar-note/build/index.html)
 * [自适应屏幕宽度的轮播图](https://abbyshaw36.github.io/efficacy/adaptive-image-carousel/index.html)
 * [日历](https://abbyshaw36.github.io/efficacy/calendar/index.html)
 * [购物车](https://abbyshaw36.github.io/efficacy/cart/index.html)

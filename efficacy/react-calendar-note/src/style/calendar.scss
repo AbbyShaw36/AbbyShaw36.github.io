@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+$headerTop: 10px;
+$headerHeight: 20px;
+$mainColor: #44bcf0;
+$gridWidth: 60px;
+$calendarWidth: $gridWidth * 7;
+$noteWidth: 600px;
+$bearWidth: $calendarWidth + $noteWidth;
+
+.bearCalendarNote {
+  width: $bearWidth;
+}
+
+.calendar {
+  float: left;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  color: #585858;
+}
+
+.calnedar_header {
+  position: relative;
+  width: $calendarWidth;
+  padding: $headerTop 0;
+  background: $mainColor;
+  border-bottom: 1px solid #fff;
+  overflow: hidden;
+  text-align: center;
+  line-height: $headerHeight;
+  font-size: 20px;
+  color: #fff;
+
+  button {
+    position: absolute;
+    top: $headerTop;
+    height: $headerHeight;
+    width: $headerHeight;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+
+    &:nth-of-type(1) {
+      left: 0;
+    }
+
+    &:nth-of-type(2) {
+      right: 0;
+    }
+  }
+}
+
+.calendar_grid {
+  width: $calendarWidth;
+}
+
+.calendar_grid_head,
+.calendar_grid_body {
+  overflow: hidden;
+}
+
+.calendar_grid_item {
+  float: left;
+  display: block;
+  width: $gridWidth;
+  height: $gridWidth;
+  border: 1px solid $mainColor;
+  box-sizing: border-box;
+
+  &:not(:nth-of-type(7n+1)) {
+    border-left: none;
+  }
+
+  &.prevMonth, &.nextMonth {
+    background: #dfdfdf;
+    color: #919191;
+  }
+
+  &.hasNote:after {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(img/flag.png) no-repeat;
+    background-size: 100%;
+    content: "";
+  }
+
+  &.currentDate {
+    background: #b7e8ff;
+  }
+
+  &.today {
+    color: $mainColor;
+  }
+}
+
+.calendar_grid_head {
+  background: $mainColor;
+  color: #fff;
+
+  .calendar_grid_item {
+    height: auto;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+.calendar_grid_body {
+  .calendar_grid_item {
+    position: relative;
+    padding: 10px;
+    border-top: none;
+  }
+}
+
+.note {
+  float: left;
+  width: $noteWidth;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.note_title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-size: 18px;
+}
+
+.note_textarea {
+  display: block;
+  width: 100%;
+  height: $noteWidth / 3;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.note_btn {
+  float: right;
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  border: none;
+  background: $mainColor;
+  font-size: 16px;
+  color: #fff;
+}
+
